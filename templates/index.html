@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block title %}Timeline Portfolio{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold mb-4 animate-on-scroll">My Portfolio Timeline</h1>
+                <p class="lead mb-5 animate-on-scroll">A chronological journey through my projects and accomplishments</p>
+                <a href="#timeline" class="scroll-down-btn animate-on-scroll">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="timeline-section py-5" id="timeline">
+    <div class="container">
+        {% if error %}
+        <div class="alert alert-warning">
+            {{ error }}
+        </div>
+        {% endif %}
+        
+        <div class="timeline">
+            {% for year in years %}
+            <div class="timeline-item animate-on-scroll">
+                <div class="timeline-year">
+                    <h2>{{ year }}</h2>
+                </div>
+                <div class="timeline-content">
+                    {% for project in projects_by_year[year] %}
+                    <div class="project-card">
+                        <div class="card-icon">
+                            <i class="{{ project.image_class }}"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="project-title">{{ project.title }}</h3>
+                            <p class="project-description">{{ project.description }}</p>
+                            <div class="technologies">
+                                {% for tech in project.technologies %}
+                                <span class="tech-badge">{{ tech }}</span>
+                                {% endfor %}
+                            </div>
+                            <a href="{{ project.github_url }}" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Smooth scroll to timeline when arrow is clicked
+    document.querySelector('.scroll-down-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('#timeline').scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    });
+</script>
+{% endblock %}
