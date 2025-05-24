@@ -1,15 +1,13 @@
 {% extends "layout.html" %}
 
-{% block title %}Timeline Portfolio{% endblock %}
-
 {% block content %}
 <!-- Hero Section -->
 <section class="hero" id="hero">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12 text-center">
-                <h1 class="display-4 fw-bold mb-4 animate-on-scroll">My Portfolio Timeline</h1>
-                <p class="lead mb-5 animate-on-scroll">A chronological journey through my projects and accomplishments</p>
+                <h1 class="display-4 fw-bold mb-4 animate-on-scroll">Project Portfolio</h1>
+                <p class="lead mb-5 animate-on-scroll">Highlights of my work in internal systems, dashboards, and practical business solutions.</p>
                 <a href="#timeline" class="scroll-down-btn animate-on-scroll">
                     <i class="fas fa-chevron-down"></i>
                 </a>
@@ -41,14 +39,14 @@
                         </div>
                         <div class="card-content">
                             <h3 class="project-title">{{ project.title }}</h3>
-                            <p class="project-description">{{ project.description }}</p>
+                            <p>{{ project.description | replace('\n', '<br>') | safe }}</p>
                             <div class="technologies">
                                 {% for tech in project.technologies %}
                                 <span class="tech-badge">{{ tech }}</span>
                                 {% endfor %}
                             </div>
                             <a href="{{ project.github_url }}" target="_blank" class="github-link">
-                                <i class="fab fa-github"></i> View on GitHub
+                                <i class="fa-solid fa-link"></i> View Project
                             </a>
                         </div>
                     </div>
