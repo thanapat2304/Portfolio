@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero position-relative" id="hero">
+    <div id="particles-js" class="position-absolute w-100 h-100"></div>
+    <div class="container h-100 position-relative">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold mb-4 animate-on-scroll">Project Portfolio</h1>
+                <p class="lead mb-5 animate-on-scroll">Highlights of my work in internal systems, dashboards, and practical business solutions.</p>
+                <a href="#projects" class="scroll-down-btn animate-on-scroll">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects-section py-5" id="projects">
+    <div class="container">
+        {% if error %}
+        <div class="alert alert-warning">
+            {{ error }}
+        </div>
+        {% endif %}
+        
+        <div class="projects-grid">
+            {% for project in all_projects %}
+            <div class="project-card animate-on-scroll">
+                <div class="laptop-display animate-on-scroll">
+                    <div class="laptop-screen">
+                        <img src="{{ project.image_path }}" alt="{{ project.title }}" class="project-image">
+                    </div>
+                    <div class="laptop-base"></div>
+                </div>
+                <div class="card-content animate-on-scroll">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p>{{ project.description | replace('\n', '<br>') | safe }}</p>
+                    <div class="technologies animate-on-scroll">
+                        {% for tech in project.technologies %}
+                        <span class="tech-badge">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    <a href="{{ project.github_url }}" target="_blank" class="github-link">
+                        <i class="fa-solid fa-link"></i> View Project
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    // Particles.js Configuration
+    particlesJS('particles-js', {
+        particles: {
+            number: {
+                value: 80,
+                density: {
+                    enable: true,
+                    value_area: 800
+                }
+            },
+            color: {
+                value: '#ffffff'
+            },
+            shape: {
+                type: 'circle'
+            },
+            opacity: {
+                value: 0.5,
+                random: false
+            },
+            size: {
+                value: 3,
+                random: true
+            },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: '#ffffff',
+                opacity: 0.4,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 2,
+                direction: 'none',
+                random: false,
+                straight: false,
+                out_mode: 'out',
+                bounce: false
+            }
+        },
+        interactivity: {
+            detect_on: 'canvas',
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: 'grab'
+                },
+                onclick: {
+                    enable: true,
+                    mode: 'push'
+                },
+                resize: true
+            }
+        },
+        retina_detect: true
+    });
+
+    // Smooth scroll to projects when arrow is clicked
+    document.querySelector('.scroll-down-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('#projects').scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    });
+</script>
+{% endblock %}
