@@ -14,11 +14,12 @@ projects = [
     },
     {
         "title": "Portfolio Website",
-        "description": "A Flask-based portfolio website with a chronological storytelling layout and dark theme, showcasing projects by year with GitHub repository links.",
-        "technologies": ["Flask", "Python", "HTML/CSS", "Bootstrap 5", "JavaScript"],
-        "github_url": "https://github.com/yourusername/portfolio-website",
-        "year": 2023,
-        "image_class": "fa-solid fa-globe" # Font Awesome icon class
+        "description": """This portfolio website is created to collect and showcase all the works of Thanapurt Sopon
+        \n You can view a live demo of this project by clicking the "View Project" button below.""",
+        "technologies": ["Flask", "Python", "HTML/CSS", "Bootstrap 5", "JavaScript", "Jinja2"],
+        "github_url": "https://github.com/thanapat2304/Portfolio",
+        "year": 2025,
+        "image_class": "fa-solid fa-address-book"
     },
     {
         "title": "Asset-System",
@@ -70,20 +71,56 @@ projects = [
         "image_class": "fa-solid fa-note-sticky"
     },
     {
-        "title": "Personal Blog",
-        "description": "A personal blog built from scratch with a custom CMS for managing posts and categories.",
-        "technologies": ["PHP", "MySQL", "JavaScript", "CSS", "Markdown Support"],
-        "github_url": "https://github.com/yourusername/personal-blog",
-        "year": 2020,
-        "image_class": "fa-solid fa-pen-to-square"
+        "title": "IT-Service",
+        "description": """This system was developed to provide all employees with a convenient and structured way to report issues or request assistance from the IT department. Once a request is submitted, a real-time notification is automatically sent to all IT staff via Telegram, ensuring prompt awareness and response.
+        \n After resolving an issue, IT personnel record the details of the resolution process, including the methods used, in the system. This documentation allows others to reference and follow the same steps if similar problems arise in the future. Additionally, the system serves as a valuable tool for collecting service data, which can be used to evaluate the IT department’s annual KPIs more effectively.
+        \n You can view a live demo of this project by clicking the "View Project" button below.""",
+        "technologies": ["Flask", "Python", "SQL", "HTML/CSS", "JavaScript", "MySql", "Chart.js", "IIS", "Jinja2", "Telegram Bot API"],
+        "github_url": "https://it-service-lf5x.onrender.com",
+        "year": 2024,
+        "image_class": "fa-solid fa-server"
     },
     {
-        "title": "Recipe Sharing Platform",
-        "description": "A community platform for sharing and discovering recipes with rating and comments.",
-        "technologies": ["Flask", "SQLAlchemy", "PostgreSQL", "JavaScript", "Cloudinary API"],
-        "github_url": "https://github.com/yourusername/recipe-platform",
-        "year": 2019,
-        "image_class": "fa-solid fa-utensils"
+        "title": "FDA-Service",
+        "description": """Developed to solve inefficiencies in retrieving FDA certification documents. Previously, sales staff had to request certificates from the import department, who then manually searched through multiple folders—often taking a long time or sometimes failing to find the correct files due to inconsistent naming. This system centralizes and automates document retrieval, reducing search time to 1–2 minutes, significantly improving workflow efficiency and supporting increased sales effectiveness.
+        \n You can view a live demo of this project by clicking the "View Project" button below.""",
+        "technologies": ["Flask", "Python", "SQL", "HTML/CSS", "JavaScript", "Bootstrap 5", "MySql", "Chart.js", "IIS", "Jinja2", "os"],
+        "github_url": "https://fda-service.onrender.com",
+        "year": 2025,
+        "image_class": "fa-solid fa-folder-open"
+    },
+    {
+        "title": "Forecasting-System",
+        "description": """The Forecasting-System was developed to support the Import department in consolidating monthly sales forecast data from the sales team. Previously, each salesperson submitted their individual forecast requests via email, requiring the Import team to open and review each email manually, then compile the data into Excel. This process was time-consuming and prone to data omissions.
+        \n The Forecasting-System directly addresses this issue by allowing the Import team to instantly view consolidated forecast data by product, along with the number of salespeople and customers involved. On the sales side, instead of sending emails, sales staff can now conveniently submit their forecasts through a dedicated Forecasting menu within the Sales-Performance system. This streamlines the workflow and significantly improves operational efficiency for both teams.
+        \n You can view a live demo of this project by clicking the "View Project" button below.""",
+        "technologies": ["Flask", "Python", "SQL", "HTML/CSS", "JavaScript", "Bootstrap 5", "MySql", "Chart.js", "IIS", "Jinja2"],
+        "github_url": "https://forecasting-system.onrender.com",
+        "year": 2025,
+        "image_class": "fa-solid fa-chart-line"
+    },
+    {
+        "title": "Line-Chatbot",
+        "description": """This Line Chatbot was developed as an extension of the Forecasting-System, designed to provide users with a fast and convenient way to check product availability relevant to their own sales quota.
+        \n Users can send a message in the format: "คงเหลือ 10313 ของ 4567 เดือน 7" to inquire about the remaining stock of product code 10313, under the responsibility of salesperson ID 4567, for the month of July. 
+        \n The system instantly calculates: "Forecast Quantity – Actual Sales" and returns the real-time remaining balance.
+        \n This function addresses a long-standing challenge where sales staff were previously unable to check their available stock on demand. They had to rely on other departments for this information, which often caused delays, increased the risk of overcommitting stock, or even led to missed sales opportunities due to waiting for confirmations.
+        \n Additionally, users can check overall warehouse stock by sending a message such as: "ตรวจ Y-127771" 
+        \n to view the total remaining quantity of product code Y-127771 across all sales. This is especially useful when an individual salesperson's quota is insufficient—they can quickly check if another salesperson has excess stock and coordinate a transfer, helping prevent lost sales due to stockouts.
+        \n You can view a live demo of this project by clicking the "View Project" button below. """,
+        "technologies": ["Flask", "Python", "SQL", "MySql", "LINE Messaging API", "Webhook Handling", "IIS"],
+        "github_url": "https://github.com/thanapat2304/Line-Chatbot",
+        "year": 2025,
+        "image_class": "fa-brands fa-line"
+    },
+    {
+        "title": "Intranet-Service",
+        "description": """The Intranet-Service system has been developed as a centralized hub for internal organizational system links, designed to facilitate quick and easy access to various platforms. Additionally, the system efficiently supports the announcement and dissemination of important news and information within the organization.
+        \n You can view a live demo of this project by clicking the "View Project" button below.""",
+        "technologies": ["Flask", "Python", "SQL", "MySql", "HTML/CSS", "JavaScript", "IIS", "Jinja2"],
+        "github_url": "https://intranet-service.onrender.com",
+        "year": 2024,
+        "image_class": "fa-solid fa-network-wired"
     }
 ]
 
@@ -103,10 +140,17 @@ bio_data = {
             "year": "2020-2024"
         }
     ],
+    "experience": [
+        {
+            "workplace": "American-European Products (AEP)",
+            "position": "Developer",
+            "year": "2024-2025"
+        }
+    ],
     "skills": [
-        "Python", "JavaScript", "Flask", "Django", "React", 
-        "SQL/NoSQL Databases", "RESTful APIs", "Docker", 
-        "Cloud Services (AWS, GCP)", "Machine Learning"
+        "Python", "Flask", "SQL (MySQL, SQL Server)", "HTML/CSS/JavaScript", "Bootstrap", 
+        " API Integration", " Bash & Batch Scripting", "Excel Macro", 
+        "IIS"
     ]
 }
 
@@ -116,5 +160,5 @@ contact_info = {
     "github": "https://github.com/thanapat2304",
     "linkedin": "https://linkedin.com/in/yourusername",
     "phon": "+66 617066959",
-    "message": "I'm currently looking for opportunities to join a forward-thinking team where I can apply my skills and continue learning. If you're hiring or interested in collaborating, please don’t hesitate to reach out."
+    "message": "I'm currently seeking opportunities to join a dynamic and innovative team where I can contribute my skills, grow professionally, and take on meaningful challenges. If you're hiring or open to collaboration, feel free to reach out—I'd love to connect."
 }
