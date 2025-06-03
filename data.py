@@ -149,8 +149,8 @@ bio_data = {
     ],
     "skills": [
         "Python", "Flask", "SQL (MySQL, SQL Server)", "HTML/CSS/JavaScript", "Bootstrap", 
-        " API Integration", " Bash & Batch Scripting", "Excel Macro", 
-        "IIS"
+        "API Integration", "Batch Scripting", "Excel Macro", 
+        "IIS (Internet Information Services)"
     ]
 }
 
