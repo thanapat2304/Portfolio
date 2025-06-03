@@ -129,7 +129,7 @@ bio_data = {
     "name": "Thanapurt Sopon",
     "tagline": "Automation Engineer & Full-stack Developer",
     "profile_image_class": "fa-solid fa-user-circle fa-10x",
-    "intro": "I'm a passionate software developer with expertise in web development, data science, and cloud technologies.",
+    "intro": "I'm a passionate software developer with expertise in web development, data science, and technologies.",
     "story": """
     I began my technology journey in 2022 by developing small-scale web applications and learning the fundamentals of programming. Since then, I have expanded my skill set to include backend development, database design, and deep learning. I enjoy creating web applications that solve real-world problems and automate tasks to save time and improve efficiency. My approach combines technical expertise with a strong focus on user experience and clean design. When I'm not coding, I enjoy reading finance books, exploring technology blogs, and going for runs to stay active.
     """,
