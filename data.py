@@ -127,7 +127,7 @@ projects = [
 # Bio information for About page
 bio_data = {
     "name": "Thanapurt Sopon",
-    "tagline": "Automation Engineer & Full-stack Developer",
+    "tagline": "Python Developer & Full-stack Developer",
     "profile_image_class": "fa-solid fa-user-circle fa-10x",
     "intro": "I'm a passionate software developer with expertise in web development, data science, and technologies.",
     "story": """
