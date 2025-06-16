@@ -150,7 +150,7 @@ bio_data = {
     "skills": [
         "Python", "Flask", "SQL (MySQL, SQL Server)", "HTML/CSS/JavaScript", "Bootstrap", 
         "API Integration", "Batch Scripting", "Excel Macro", "IIS (Internet Information Services)",
-        "Golang", "Gin"
+        "Golang", "Gin", "PostgreSQL", "Docker"
     ]
 }
 
